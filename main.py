@@ -259,23 +259,14 @@ vectorLengthsProducts = vectorLengthsProduct(docsVectorLengths,queryVectorLength
 print "\n"
 print "Vector Lengths Products: ", vectorLengthsProducts
 similarities =  cosineSimilarity(dotProducts,vectorLengthsProducts)
-# print "**" * 10
-# print "--" * 10
-# print "Similarities : ", similarities
-# print "--" * 10
-# print "**" * 10
+
 print "\n"
 from operator import itemgetter
 sorted_similarities = sorted(similarities.iteritems(), key=itemgetter(1))
 sorted_similarities.reverse()
 for rank, similarity in enumerate(sorted_similarities):
 	print "Rank= " + str(rank+1) + " " + similarity[0]+ ": " + str(similarity[1])
-# for key,value in sorted_similarities.iteritems():
-# 	# print "Doc%s  : %s " %  (str(i), key)
-# 	print "*"*15,
-# 	print 'DocID:{0:<0}'.format(key),
-# 	print "*"*15
-# 	print '{0:>40}'.format(value)
+
 	
 
 
