@@ -1,3 +1,21 @@
+"""
+Copyright (C) 2013 Michael Eleftheriades
+This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Description: A simple example for calculating the similarities between a set of documents 
+and a query. 
+    """
 # A simple document i.e a document that contains just text
 class Document(object)
 	STOPWORDS = ['a','able','about','across','after','all','almost','also','am','among',
@@ -12,13 +30,7 @@ class Document(object)
              'wants','was','we','were','what','when','where','which','while','who',
              'whom','why','will','with','would','yet','you','your', '.', ',', '!' , '?', ' ']
 	
-	#Static variables - Should not declare variables here
-	#corpus = None
-	#terms = {} #{'term': tf, 'term': tf}
-	#termsIdf = None
-	#tfidf = None
-	#only if part of a corpus
-	#weight = None
+	
 	def __init__(self, title, docID, content, stemming= None, corpus = None ):
 		self._title = title
 		self._docID = docID #user defined for now
@@ -73,7 +85,7 @@ class Document(object)
 		"""
 		return self._tf.keys()
 
-	
+
 
 
 
